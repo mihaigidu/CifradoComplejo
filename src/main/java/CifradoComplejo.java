@@ -9,6 +9,7 @@ public class CifradoComplejo {
             char caracterActual = texto.charAt(i);
 
 
+
         }
     }
 }
