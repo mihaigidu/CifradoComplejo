@@ -44,7 +44,6 @@ public class CifradoComplejo {
                 resultado.append(nuevoCaracter);
 
             } else {
-                // Si no es letra (espacio, punto, etc.), se deja igual
                 resultado.append(caracterActual);
             }
         }
@@ -53,14 +52,12 @@ public class CifradoComplejo {
     }
 
     public static void main(String[] args) {
-        System.out.println("--- PRUEBA DEL CIFRADO DE OSCILACIÓN DINÁMICA (JAVA) ---");
 
         String mensajeOriginal = "HOLA MUNDO";
         int claveSecreta = 5;
 
         System.out.println("Mensaje Original: " + mensajeOriginal);
         System.out.println("Clave Base: " + claveSecreta);
-        System.out.println("------------------------------------------------");
 
         // 1. Cifrar
         String mensajeCifrado = procesarMensaje(mensajeOriginal, claveSecreta, true);
@@ -70,12 +67,5 @@ public class CifradoComplejo {
         String mensajeDescifrado = procesarMensaje(mensajeCifrado, claveSecreta, false);
         System.out.println("Mensaje Descifrado: " + mensajeDescifrado);
 
-        // Verificación
-        System.out.println("------------------------------------------------");
-        if (mensajeOriginal.equals(mensajeDescifrado)) {
-            System.out.println("[ÉXITO] El algoritmo funciona correctamente.");
-        } else {
-            System.out.println("[ERROR] El mensaje descifrado no coincide.");
-        }
     }
 }
