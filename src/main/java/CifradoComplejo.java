@@ -1,5 +1,16 @@
 public class CifradoComplejo {
 
+    /*
+     * EXPLICACIÓN DE MI ALGORITMO:
+     * Mi cifrado es mas seguro que el Cesar porque el desplazamiento no es fijo.
+     * Tiene dos diferencias principales:
+     * * 1. El salto cambia: En cada vuelta del bucle, el desplazamiento es (Clave + i).
+     * Esto hace que letras iguales (como "LL") se cifren distinto.
+     * * 2. Cambio de direccion (Zig-Zag):
+     * - Si la posicion (i) es PAR: Sumo el desplazamiento (muevo a la derecha).
+     * - Si la posicion (i) es IMPAR: Resto el desplazamiento (muevo a la izquierda).
+     */
+
     private static final String ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static String procesarMensaje(String texto, int clave, boolean esCifrado) {
